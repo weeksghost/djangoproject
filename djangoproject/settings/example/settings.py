@@ -55,7 +55,7 @@ STATIC_ROOT = ''
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-        HOME + '/django-project/static',
+        HOME + '/djangoproject/static',
 )
 
 STATICFILES_FINDERS = (
