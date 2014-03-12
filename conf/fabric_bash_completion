@@ -1,0 +1,27 @@
+# file: fab_bash_completion
+# fab parameter-completion
+
+_FabBashCompletion ()
+{
+  local cur
+
+  fabcontent=( `fab --shortlist` )
+
+  COMPREPLY=()
+  cur=${COMP_WORDS[COMP_CWORD]}
+
+  case "$cur" in
+    -*)
+    COMPREPLY=( $( compgen -W '-h --help -d --display -F --list-format -l --list --set --shortlist -V --version -a --no_agent \
+                               -A --forward-agent --abort-on-prompts -c --config -D --disable-known-hosts -f --fabfile \
+                               --hide -h --hosts -i -k --no-keys --keepalive --linewise -n --connection-attempts --no-pty  \
+                               -p --password -P --port -r --reject-unknown-hosts -R --roles -s --shell --show --skip-bad-hosts \
+                               --ssh-config-path -t --timeout -u --user -w -x --exclude-hosts -z --pool-size' -- $cur ) );;
+    *)
+    COMPREPLY=( $( compgen -W '${fabcontent[@]}' -- $cur ) );;
+  esac
+
+  return 0
+}
+
+complete -F _FabBashCompletion -o filenames fab

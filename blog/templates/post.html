@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static from staticfiles %}
+
+{% block content %}
+
+    <div id="container" class="hfeed">
+        <div id="author-meta" class="clearfix">
+         <h1 class="content-blog"<p>{{ post.title }}<p></h1>
+             <h5 class="content-archive">Posted on <time datetime="{{ post.created|date:"c" }}">{{ post.created|date }}</time></h5>
+            <div class="post-meta"><p>{{ post.description }}</p></div>
+                {{ post.content|safe }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

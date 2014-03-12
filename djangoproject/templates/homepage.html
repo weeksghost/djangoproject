@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load micawber_tags %}
+{% load static from staticfiles %}
+
+{% block content %}
+
+    <div id="container" class="hfeed">
+
+        <div id="wrapper-home" class="clearfix">
+            <div id="featured" class="grid col-940">
+                <div class="grid col-460">
+
+                {% for item in featured %}
+                    <h1 class="featured-title">{{ item.featured_title }}</h1>
+                    <h2 class="featured-subtitle">{{ item.featured_subtitle }}</h2>
+                    <p>{{ item.content|safe }}</p>
+                    <div class="call-to-action">
+                        <a href={{ item.call_to_action }} title="Email" class="blue button">Email Me</a>
+                {% endfor %}
+
+                    </div><!-- end of .call-to-action -->
+                </div><!-- end of .col-460 -->
+
+                {% for video in embed %}
+                 <div id="featured-image" class="grid col-460 fit">
+                    <div id="video-wrapper">
+                        {{ video.embed_url|oembed_html:"400x300" }}
+                    </div>
+                {% endfor %}
+
+                </div><!-- end of #featured-image -->
+            </div><!-- end of #featured -->
+
+            {% for post in posts|slice:"2" %}
+            <div id="widgets" class="home-widgets">
+                <div class="grid col-300">
+                    <div class="widget-wrapper">
+                        <div class="widget-title-home">
+                            <h3><a href="{{ post.get_absolute_url }}" title="{{ post.title }}">{{ post.title|truncatewords:8 }}</a></h3>
+                        </div>
+                            <div class="textwidget">{{ post.content|safe|truncatewords:20 }}</div>
+                    </div><!-- end of .widget-wrapper -->
+                </div><!-- end of .col-300 -->
+            {% endfor %}
+
+            {% for item in third|slice:"1" %}
+            <div class="grid col-300 fit">
+                <div class="widget-wrapper">
+                    <div class="widget-title-home">
+                        <h3><a href="{{ item.get_absolute_url }}" title="{{ item.title }}">{{ item.title|truncatewords:8 }}</a></h3>
+                    </div>
+                        <div class="textwidget">{{ item.content|safe|truncatewords:20 }}</div>
+                </div><!-- end of .widget-wrapper -->
+            </div><!-- end of .col-300 fit -->
+            {% endfor %}
+
+            </div><!-- end of #widgets -->
+        </div><!-- end of wrapper -->
+    </div><!-- end of #container -->
+
+{% endblock %}

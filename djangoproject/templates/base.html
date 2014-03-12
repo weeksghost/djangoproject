@@ -1,0 +1,148 @@
+{% load static from staticfiles %}
+<!Doctype html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="description" content="Responsive Django site and blog" >
+        <meta name ="keywords" content="Django, Responsive, Blog, Video, Images, NGINX, Gunicorn, Celery, Ubuntu">
+        <title>Django Responsive - Responsive Django Blog | YOURSITE.com</title>
+        <link rel="stylesheet" href="{% static "css/styles.css" %}" />
+
+        <style type="text/css">
+            nav select {display: none;}
+        </style>
+
+    </head>
+    <body>
+
+    <div id="container" class="hfeed">
+            <div id="header">
+
+            <ul class="menu l_tinynav1">
+                <li class="head-logo">
+                    <a href="/" title="Django Responsive">
+                        <img alt="Django Responsive" src="{% static "images/default-logo-4.png" %}">
+                    </a>
+                    </li>
+                <li class="current_page_item">
+                    <a href="/" title="Home">Home</a>
+                    </li>
+                <li class="page_item page-item-2">
+                    <a href="/blog/" title="Blog">Blog</a>
+                    </li>
+                <li class="page_item page-item-3">
+                    <a href="/contact/" title="Contact">Contact</a>
+                    </li>
+            </ul>
+
+                <div id="tiny-head-logo">
+                    <a href="/" title="Django Responsive">
+                        <img alt="Django Responsive" src="{% static "images/default-logo-4.png" %}"></a>
+
+                </div>
+
+            <nav>
+                <select id="tinynav1" class="tinynav">
+
+                    <option value="/" selected="selected">Home</option>
+                    <option value="/blog/">Blog</option>
+                    <option value="/contact/">Contact</option>
+                </select>
+            </nav>
+
+            </div>
+            </div><!-- end of #container -->
+
+    {% block content %}{% endblock %}
+
+        <script src="{% static "js/jquery-1.9.1.min.js" %}"></script>
+
+        <script type="text/javascript">
+
+            $("<select />").appendTo("nav");
+
+            $("<option />", {
+                "selected": "selected",
+                "value"   : "",
+                "text"    : "Go to..."
+             }).appendTo("nav select");
+
+            $("nav a").each(function() {
+             var el = $(this);
+             $("<option />", {
+                 "value"   : el.attr("href"),
+                 "text"    : el.text()
+             }).appendTo("nav select");
+            });
+
+            $('nav select').change(function(){
+                var tinynav = $(this).find("option:selected").val();
+                window.location = tinynav
+            });
+
+        </script>
+
+        <script>
+
+        jQuery(document).ready(function ($) {
+            $("a[href=#scroll-top]").click(function () {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, "slow");
+                return false;
+            });
+        });
+
+        </script>
+
+        <div id="footer" class="clearfix">
+        {% block footer %}
+            <div id="footer-wrapper">
+                <div class="grid col-940">
+                    <div class="grid col-540">
+                        <ul id="menu-foot" class="footer-menu">
+                            <li id="menu-item-715" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-715">
+                             <a href="/" title="Home">Home</a></li>
+                            <li id="menu-item-716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-716">
+                             <a href="/blog/" title="Blog">Blog</a></li>
+                            <li id="menu-item-717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-717">
+                             <a href="/contact/" title="Contact">Contact</a></li>
+                        </ul>
+
+                    </div><!-- end of col-540 -->
+
+                    <div class="grid col-380 fit">
+                     <ul class="social-icons">
+                      <li class="twitter-icon"><a href="#" target="_blank" title="Twitter"><img src="{% static "images/icons/twitter-icon.png" %}" width="24" height="24" alt="Twitter"></a></li>
+                      <li class="linkedin-icon"><a href="#" target="_blank" title="LinkedIn"><img src="{% static "images/icons/linkedin-icon.png" %}" width="24" height="24" alt="Twitter"></a></li>
+                      <li class="google-plus-icon"><a href="#" target="_blank" title="Google Plus"><img src="{% static "images/icons/googleplus-icon.png" %}" width="24" height="24" alt="Google Plus"></a></li>
+                     </ul>
+                    </div>
+
+                </div><!-- end of col-940 -->
+
+                <div class="grid col-300 copywright">
+                    &copy; {% now "Y" %} <a href="#" title="">Your Site</a>
+                </div><!-- end of .copyright -->
+
+                <div class="grid col-300 scroll-top">
+                    <a href="#scroll-top" title="scroll to top">&uarr;</a>
+                </div><!-- end of .scroll-top -->
+
+                <div class="grid col-300 fit powered">
+                    <a href="/" title="Django Responsive">
+                    Responsive Theme</a>
+                    powered by <a href="https://www.djangoproject.com/" title="Django">
+                    Django</a>
+                </div><!-- end .powered -->
+
+            </div><!-- end #footer-wrapper -->
+        {% endblock %}
+        </div><!-- end #footer -->
+
+    <script type="text/javascript" src="{% static "js/responsive-modernizr.js" %}"></script>
+    </body>
+</html>

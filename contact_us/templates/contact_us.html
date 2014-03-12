@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static from staticfiles %}
+
+{% block content %}
+
+<style>
+.featured-title {
+  padding-top: 0 !important;
+}
+</style>
+
+    <div id="container" class="hfeed">
+
+        <div id="wrapper-home" class="clearfix">
+                <div class="col-300">
+
+                    <h1 class="featured-title">Contact</h1>
+
+                    <div id="respond" class="comment-repsond">
+                      <form name="Contact" action="" method="POST">{% csrf_token %} 
+                            {{ form.non_field_errors }}
+                        <div class="comment-form-author">
+                            {{ form.name.errors }}
+                            <label id="id_name">Name:</label>
+                            {{ form.name }}
+                        </div>
+                        <div class="comment-form-email">
+                            {{ form.email.errors }}
+                            <label id="id_email">Email:</label>
+                            {{ form.name }}
+                        </div>
+                        <div class="comment-form-comment">
+                            {{ form.body.errors }}
+                            <label id="id_body">Message:</label>
+                            {{ form.body }}
+                        </div>
+                            <div class="form-submit">
+                               <p><input type="submit" value="Send message" /></p>
+                            </div>
+                      </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

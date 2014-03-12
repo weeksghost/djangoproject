@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static from staticfiles %}
+
+{% block content %}
+
+<div id="container" class="hfeed">
+    <div class="col-300">
+
+        <h1 class="post-data">Blog Posts</h1>
+            {% for post in posts %}
+        <div id="author-meta" class="clearfix">
+            <div class="post-entry">
+              <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+
+                <div class="post-edit"<p>{{ post.content|safe|truncatewords:45 }}</p></div>
+
+                    <div class="post-meta"><p>{{ post.description }}</p>
+                        <p>Posted on <time datetime="{{ post.created|date:"c" }}">{{ post.created|date }}</time></p>
+    </div>
+</div>
+</div>
+
+{% endfor %}
+{% endblock %}
