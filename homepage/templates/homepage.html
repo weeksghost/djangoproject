@@ -4,7 +4,7 @@
 
 {% block content %}
 
-    <div id="container" class="hfeed">
+    <div class="container">
 
         <div id="wrapper-home" class="clearfix">
             <div id="featured" class="grid col-940">
@@ -31,31 +31,23 @@
                 </div><!-- end of #featured-image -->
             </div><!-- end of #featured -->
 
-            {% for post in posts|slice:"0" %}
-            <div id="widgets" class="home-widgets">
-                <div class="grid col-300">
+    </div><!-- end of #container -->
+
+    <div class="container">
+        <div class="row">
+            {% for post in posts%}
+            <div class="col-lg-4">
+                <div id="widgets" class="home-widgets">
                     <div class="widget-wrapper">
                         <div class="widget-title-home">
-                            <h3><a href="{{ post.get_absolute_url }}" title="{{ post.title }}">{{ post.title|truncatewords:8 }}</a></h3>
-                        </div>
+                        <h3><a href="{{ post.get_absolute_url }}" title="{{ post.title }}">{{ post.title|truncatewords:8 }}</a></h3>
                             <div class="textwidget">{{ post.content|safe|truncatewords:20 }}</div>
-                    </div><!-- end of .widget-wrapper -->
-                </div><!-- end of .col-300 -->
-            {% endfor %}
-
-            {% for item in third %}
-            <div class="grid col-300 fit">
-                <div class="widget-wrapper">
-                    <div class="widget-title-home">
-                        <h3><a href="{{ item.get_absolute_url }}" title="{{ item.title }}">{{ item.title|truncatewords:8 }}</a></h3>
+                        </div>
                     </div>
-                        <div class="textwidget">{{ item.content|safe|truncatewords:20 }}</div>
-                </div><!-- end of .widget-wrapper -->
-            </div><!-- end of .col-300 fit -->
+                </div>
+            </div>
             {% endfor %}
-
-            </div><!-- end of #widgets -->
-        </div><!-- end of wrapper -->
-    </div><!-- end of #container -->
+        </div>
+    </div>
 
 {% endblock %}

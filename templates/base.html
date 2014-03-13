@@ -1,7 +1,31 @@
 {% load static from staticfiles %}
 <!Doctype html>
+<!--[if lt IE 8 ]>
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+    xmlns:fb="http://www.facebook.com/2008/fbml"
+    xmlns:og="http://ogp.me/ns#"
+    class="no-js ie7">
+<![endif]-->
 
-<html>
+<!--[if IE 8 ]>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+    xmlns:fb="http://www.facebook.com/2008/fbml"
+    xmlns:og="http://ogp.me/ns#"
+    class="no-js ie8">
+<![endif]-->
+
+<!--[if IE 9 ]>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+    xmlns:fb="http://www.facebook.com/2008/fbml"
+    xmlns:og="http://ogp.me/ns#"
+    class="no-js ie9">
+<![endif]-->
+
+<!--[if ! lt IE 9]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+    xmlns:fb="http://www.facebook.com/2008/fbml"
+    xmlns:og="http://ogp.me/ns#"
+    class="no-js"><![endif]-->
 
     <head>
         <meta charset="utf-8" />
@@ -18,9 +42,10 @@
     </head>
     <body>
 
-    <div id="container" class="hfeed">
-            <div id="header">
+    <div id="content">
+        <div id="header">
 
+            <div class="container">
             <ul class="menu l_tinynav1">
                 <li class="head-logo">
                     <a href="/" title="Django Responsive">
@@ -52,9 +77,7 @@
                     <option value="/contact/">Contact</option>
                 </select>
             </nav>
-
             </div>
-            </div><!-- end of #container -->
 
     {% block content %}{% endblock %}
 
@@ -97,6 +120,8 @@
         });
 
         </script>
+
+        </div>{# /container #}
 
         <div id="footer" class="clearfix">
         {% block footer %}
