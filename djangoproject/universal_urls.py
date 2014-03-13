@@ -4,7 +4,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-        url(r'^$', 'djangoproject.views.homepage', name='home'),
+        url(r'^$', 'homepage.views.homepage', name='home'),
 
         (r'', include('sitemaps.urls')),
         (r'^robots\.txt$', include('robots.urls')),

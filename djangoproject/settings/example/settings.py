@@ -1,15 +1,6 @@
 from djangoproject.universal_settings import*
 
 import os
-import sys
-from os.path import abspath, dirname, join
-
-
-PROJECT_DIR = abspath(dirname(__file__))
-grandparent = abspath(join(PROJECT_DIR, '..'))
-for path in (grandparent, PROJECT_DIR):
-    if path not in sys.path:
-        sys.path.insert(0, path)
 
 HOME = os.getenv("HOME")
 
@@ -66,12 +57,6 @@ STATICFILES_FINDERS = (
 
 SECRET_KEY = 'j-39$ty7jpf8fi+oubglzwy6+8pg&ot518qt)1tuqu++nvbj&%'
 
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
-)
-
 INSTALLED_APPS += (
     'django_extensions',
     'south',
@@ -85,7 +70,7 @@ CACHES = {
 }
 
 TEMPLATE_DIRS = (
-        join(PROJECT_DIR, 'templates'),
+        HOME + '/djangoproject/templates',
 )
 
 # Celery

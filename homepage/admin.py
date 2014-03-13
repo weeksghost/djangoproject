@@ -1,4 +1,4 @@
-from djangoproject.models import FeaturedText, HomeWidget, FeaturedVideo 
+from homepage.models import FeaturedText, HomeWidget, FeaturedVideo 
 from django.contrib import admin
 
 from django.utils.translation import ugettext_lazy as _

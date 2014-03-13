@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from djangoproject.models import FeaturedText, HomeWidget, FeaturedVideo
+from homepage.models import FeaturedText, HomeWidget, FeaturedVideo
 from blog.models import Post
 
 def homepage(request):

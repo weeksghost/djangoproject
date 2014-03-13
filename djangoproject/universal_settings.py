@@ -5,6 +5,16 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+)
+
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -51,11 +61,9 @@ INSTALLED_APPS = (
     'micawber.contrib.mcdjango',
     'robots',
 
-    'djangoproject',
-
-    'base',
     'blog',
     'contact_us',
+    'homepage',
     'mediaspot',
     'sitemaps',
 )
