@@ -1,0 +1,61 @@
+[
+{
+  "pk": 1, 
+  "model": "homepage.featuredtext", 
+  "fields": {
+    "active": true, 
+    "content": "This is a simple responsive site, powered by <a href=\"http://en.wikipedia.org/wiki/Django_(web_framework)\" target=\"_blank\">Django</a>. The site is a pet project that uses all of the applications explained in this <a href=\"http://homepage.com/blog/complete-single-server-django-stack-tutorial/\">entry</a>.\r\n<br><br/>", 
+    "call_to_action": "http://homepage.com/contact_us/", 
+    "featured_subtitle": "Responsive Tech Blog", 
+    "featured_title": "Django Responsive"
+  }
+},
+{
+  "pk": 1, 
+  "model": "homepage.homewidget", 
+  "fields": {
+    "first_text": "The above video is also controlled via the CMS. Simply grab the url for a video, copy it into the CMS, save it and it will appear on the site in seconds.  If you would like to test out the admin send me a request via email.", 
+    "first_title": "Video", 
+    "second_text": "I am a self-taught web developer as well as a QA professional. I write automated tests, manage various projects and coordinate releases (via code management and review) to production weekly.", 
+    "third_title": "What's Next", 
+    "third_text": "Tons of stuff!   First IE support, then I will create more pages that go into more detail about the technologies rendering the site.  After that, forms, a blog, site search and design enhancements happening along the way.", 
+    "second_title": "About Me"
+  }
+},
+{
+  "pk": 1, 
+  "model": "homepage.featuredvideo", 
+  "fields": {
+    "active": true, 
+    "embed_url": "http://www.youtube.com/watch?v=9D05ej8u-gU", 
+    "title": "The Most Astounding Fact - Neil deGrasse Tyson"
+  }
+},
+{
+  "pk": 2, 
+  "model": "homepage.featuredvideo", 
+  "fields": {
+    "active": true, 
+    "embed_url": "http://www.youtube.com/watch?v=w0ffwDYo00Q&feature=share&list=PLagyxbJHFyL11iTef4c6ALIDsD--nXkel", 
+    "title": "Simon's Cat"
+  }
+},
+{
+  "pk": 3, 
+  "model": "homepage.featuredvideo", 
+  "fields": {
+    "active": false, 
+    "embed_url": "http://www.youtube.com/watch?v=BHiJK1KJHac", 
+    "title": "Bunnies"
+  }
+},
+{
+  "pk": 4, 
+  "model": "homepage.featuredvideo", 
+  "fields": {
+    "active": true, 
+    "embed_url": "http://www.youtube.com/watch?v=1wHr-O6gEfc", 
+    "title": "dpxdt"
+  }
+}
+]
