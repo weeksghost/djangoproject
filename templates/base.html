@@ -42,10 +42,8 @@
     </head>
     <body>
 
-    <div id="content">
-        <div id="header">
 
-            <div class="container">
+        <div class="container">
             <ul class="menu l_tinynav1">
                 <li class="head-logo">
                     <a href="/" title="Django Responsive">
@@ -77,7 +75,6 @@
                     <option value="/contact/">Contact</option>
                 </select>
             </nav>
-            </div>
 
     {% block content %}{% endblock %}
 
@@ -120,8 +117,6 @@
         });
 
         </script>
-
-        </div>{# /container #}
 
         <div id="footer" class="clearfix">
         {% block footer %}
@@ -167,6 +162,8 @@
             </div><!-- end #footer-wrapper -->
         {% endblock %}
         </div><!-- end #footer -->
+
+    </div>{# /container #}
 
     <script type="text/javascript" src="{% static "js/responsive-modernizr.js" %}"></script>
     </body>
