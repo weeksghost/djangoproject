@@ -46,23 +46,23 @@
         <div class="container">
             <ul class="menu l_tinynav1">
                 <li class="head-logo">
-                    <a href="/" title="Django Responsive">
+                    <a href="{% url 'home' %}" title="Django Responsive">
                         <img alt="Django Responsive" src="{% static "images/default-logo-4.png" %}">
                     </a>
                     </li>
                 <li class="current_page_item">
-                    <a href="/" title="Home">Home</a>
+                    <a href="{% url 'home' %}" title="Home">Home</a>
                     </li>
                 <li class="page_item page-item-2">
-                    <a href="/blog/" title="Blog">Blog</a>
+                    <a href="{% url 'blog' %}" title="Blog">Blog</a>
                     </li>
                 <li class="page_item page-item-3">
-                    <a href="/contact/" title="Contact">Contact</a>
+                    <a href="{% url 'contact' %}" title="Contact">Contact</a>
                     </li>
             </ul>
 
                 <div id="tiny-head-logo">
-                    <a href="/" title="Django Responsive">
+                    <a href="{% url 'home' %}" title="Django Responsive">
                         <img alt="Django Responsive" src="{% static "images/default-logo-4.png" %}"></a>
 
                 </div>
@@ -70,9 +70,9 @@
             <nav>
                 <select id="tinynav1" class="tinynav">
 
-                    <option value="/" selected="selected">Home</option>
-                    <option value="/blog/">Blog</option>
-                    <option value="/contact/">Contact</option>
+                    <option value="{% url 'home' %}" selected="selected">Home</option>
+                    <option value="{% url 'blog' %}">Blog</option>
+                    <option value="{% url 'contact' %}">Contact</option>
                 </select>
             </nav>
 
@@ -125,11 +125,11 @@
                     <div class="grid col-540">
                         <ul id="menu-foot" class="footer-menu">
                             <li id="menu-item-715" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-715">
-                             <a href="/" title="Home">Home</a></li>
+                             <a href="{% url 'home' %}" title="Home">Home</a></li>
                             <li id="menu-item-716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-716">
-                             <a href="/blog/" title="Blog">Blog</a></li>
+                             <a href="{% url 'blog' %}" title="Blog">Blog</a></li>
                             <li id="menu-item-717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-717">
-                             <a href="/contact/" title="Contact">Contact</a></li>
+                             <a href="{% url 'contact' %}" title="Contact">Contact</a></li>
                         </ul>
 
                     </div><!-- end of col-540 -->

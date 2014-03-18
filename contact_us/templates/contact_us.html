@@ -10,14 +10,11 @@
 }
 </style>
 
-    <div id="container" class="hfeed">
-
+    <div class="fluid-container">
         <div id="wrapper-home" class="clearfix">
-                <div class="col-300">
-
-                    <h1 class="featured-title">Contact</h1>
-
-                    <div id="respond" class="comment-repsond">
+            <div class="col-300">
+               <h1 class="featured-title">Contact</h1>
+                  <div id="respond" class="comment-repsond">
                       <form name="Contact" action="" method="POST">{% csrf_token %} 
                             {{ form.non_field_errors }}
                         <div class="comment-form-author">
@@ -39,11 +36,10 @@
                                <p><input type="submit" value="Send message" /></p>
                             </div>
                       </form>
-
-                    </div>
-                </div>
-            </div>
+                  </div>
+              </div>
+           </div>
         </div>
-    </div>
+     </div>
 
 {% endblock %}

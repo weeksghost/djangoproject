@@ -1262,16 +1262,16 @@ form div {
   padding-right: 25px;
 }
 
+.fluid-container {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0px 10px;
+}
+
 #content {
   display: table;
   height: 100%;
   width: 100%;
-}
-
-#container {
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 0px 25px;
 }
 
 #wrapper {
