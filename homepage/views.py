@@ -4,7 +4,7 @@ from homepage.models import FeaturedText, FeaturedVideo
 from blog.models import Post
 
 def homepage(request):
-    featured = FeaturedText.objects.all().order_by('featured_title', 'featured_subtitle', 'content', 'call_to_action').filter(active=True)
+    featured = FeaturedText.objects.all().filter(active=True)
 
     try:
         featured
@@ -12,7 +12,7 @@ def homepage(request):
         pass
 
     posts = Post.objects.all().filter(published=True)
-    extvideo = FeaturedVideo.objects.all().order_by('title', 'embed_url').filter(active=True)
+    extvideo = FeaturedVideo.objects.all().filter(active=True)
 
     template = 'homepage.html'
 
