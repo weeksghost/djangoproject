@@ -63,6 +63,7 @@ INSTALLED_APPS = (
 
     'blog',
     'contact_us',
+    'djangoproject',
     'homepage',
     'mediaspot',
     'sitemaps',

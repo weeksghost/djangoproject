@@ -1,4 +1,4 @@
-from homepage.models import FeaturedText, HomeWidget, FeaturedVideo 
+from homepage.models import FeaturedText, FeaturedVideo 
 from django.contrib import admin
 
 from django.utils.translation import ugettext_lazy as _
@@ -16,12 +16,6 @@ class FeaturedTextAdmin(admin.ModelAdmin):
                 kwargs['widget'] = AdminMarkItUpWidget()
         return super(FeaturedTextAdmin, self).formfield_for_dbfield(db_field, **kwargs)
 
-class HomeWidgetAdmin(admin.ModelAdmin):
-    fieldsets = [
-        ('First Widget',        {'fields' : ('first_title', 'first_text',)}),
-        ('Second Widget',       {'fields' : ('second_title', 'second_text')}),
-        ('Third Widget',        {'fields' : ('third_title',  'third_text')}),
-    ]
 
 class FeaturedVideoAdmin(admin.ModelAdmin):
     fieldsets = (
@@ -30,5 +24,4 @@ class FeaturedVideoAdmin(admin.ModelAdmin):
     list_display = ('title', 'active',)
 
 admin.site.register(FeaturedText, FeaturedTextAdmin) 
-admin.site.register(HomeWidget, HomeWidgetAdmin)
 admin.site.register(FeaturedVideo, FeaturedVideoAdmin)
