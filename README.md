@@ -1,5 +1,5 @@
 djangoproject
--------------
+=============
 
 Django powered responsive project used for my site:
 
@@ -20,15 +20,13 @@ Local setup - sqlite3 & Mac OS X
 --------------------------------
 **!!!Not to be used on production environments!!!**
 
-Dependencies
-------------
+####Dependencies
 
-**[virtualenv](http://www.virtualenv.org/en/latest/)**
+- **[virtualenv](http://www.virtualenv.org/en/latest/)**
 
-**[Compass](https://rubygems.org/gems/compass)**
+- **[Compass](https://rubygems.org/gems/compass)**
 
-Instructions
-------------
+####Instructions
 
 1. Clone the repo:
 
