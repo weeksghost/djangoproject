@@ -5,7 +5,7 @@ Django powered responsive project used for my site:
 http://brooklyndelta.com/
 
 This is an attempt to create a very basic responsive blog site powered by **[Django](https://www.djangoproject.com/)**
-and make it as easy as possible to get installed and running on a OSX Environment.
+and make it as easy as possible to get installed and running on an MAC OSX Environment.
 
 ### Caveats
 
