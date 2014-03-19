@@ -39,6 +39,7 @@ The instructions that follow are far from complete but should get you up and run
 4. Generate project css:
 
     `cd compass`
+
     `compass compile`
 
 5. Map your settings (database):
@@ -54,6 +55,7 @@ The instructions that follow are far from complete but should get you up and run
 6. Sync the database:
 
     `./manage.py syncdb`
+
     `./manage.py migrate`
 
 7. Use pre-configured fabfile to run server:
