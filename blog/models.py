@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.urlresolvers import reverse
+from django.utils import timezone
 
 
 class Post(models.Model):
@@ -8,7 +9,7 @@ class Post(models.Model):
     description = models.CharField(max_length=255)
     content = models.TextField()
     published = models.BooleanField(default=True)
-    created = models.DateTimeField(auto_now_add=True)
+    created = models.DateTimeField(default=timezone.now())
 
     class Meta:
         ordering = ['-created']
