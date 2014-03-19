@@ -14,7 +14,8 @@ Ruby **[Compass](https://rubygems.org/gems/compass)** and command line knowledge
 
 The instructions that follow are far from complete but should get you up and running.
 
-### Local setup - sqlite3 & MAC OS X - (Not to be used on production environments)
+### Local setup - sqlite3 & MAC OS X
+**Not to be used on production environments**
 
 ### Dependencies
 
@@ -49,14 +50,6 @@ The instructions that follow are far from complete but should get you up and run
     Or you can create your own. I would suggest copying and renaming the example directory
     just remember to symlink your settings.py file in the djangoproject/settings directory.
 
-    Either way the heirarchy should look like this:
-
-        |____settings
-    | |______init__.py
-    | |____example
-    | | |______init__.py
-    | | |____settings.py
-    | | |____urls.py
 
 6. Sync the database:
 
@@ -80,8 +73,8 @@ The instructions that follow are far from complete but should get you up and run
 
 9. Visit the local site:
 
-    **(http://localhost:8000/)**
+    **[http://localhost:8000/](http://localhost:8000/)**
 
 10. Visit the admin:
 
-    **(http://localhost:8000/admin/)**
+    **[http://localhost:8000/admin/](http://localhost:8000/admin/)**
