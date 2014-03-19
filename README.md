@@ -1,4 +1,5 @@
-# djangoproject
+djangoproject
+-------------
 
 Django powered responsive project used for my site:
 
@@ -7,30 +8,35 @@ http://brooklyndelta.com/
 This is an attempt to create a very basic responsive blog site powered by **[Django](https://www.djangoproject.com/)**
 and make it as easy as possible to get installed and running on a Mac.
 
-### Caveats
+Caveats
+-------
 
 This project requires some knowledge of python **[virtualenv](http://www.virtualenv.org/en/latest/)**,
 Ruby **[Compass](https://rubygems.org/gems/compass)** and command line usage.
 
 The instructions that follow are far from complete but should get you up and running.
 
-### Local setup - sqlite3 & Mac OS X
+Local setup - sqlite3 & Mac OS X
+--------------------------------
 **!!!Not to be used on production environments!!!**
 
-### Dependencies
+Dependencies
+------------
 
 **[virtualenv](http://www.virtualenv.org/en/latest/)**
+
 **[Compass](https://rubygems.org/gems/compass)**
 
-### Instructions
+Instructions
+------------
 
 1. Clone the repo:
 
-    `git clone https://github.com/weeksghost/djangoproject.git`
+    git clone https://github.com/weeksghost/djangoproject.git
 
     `cd djangoproject`
 
-2.  Create and install the project dependcies in a **[virtualenv](http://www.virtualenv.org/en/latest/virtualenv.html#installation)**
+2.  Create and install the project dependencies in a **[virtualenv](http://www.virtualenv.org/en/latest/virtualenv.html#installation)**
 
     `pip install -r requirements.txt`
 
@@ -71,6 +77,7 @@ The instructions that follow are far from complete but should get you up and run
     I've included some fixtures to preload data from my site to be used as examples:
 
     `./manage.py loaddata homepage/fixtures/homepage.json`
+
     `./manage.py loaddata blog/fixtures/entries.json`
 
 9. Visit the local site:
