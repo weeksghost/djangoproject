@@ -5,16 +5,16 @@ Django powered responsive project used for my site:
 http://brooklyndelta.com/
 
 This is an attempt to create a very basic responsive blog site powered by **[Django](https://www.djangoproject.com/)**
-and make it as easy as possible to get installed and running on an MAC OSX Environment.
+and make it as easy as possible to get installed and running on a Mac.
 
 ### Caveats
 
-Keep in mind this is a simple project. It does however require basic knowledge of python **[virtualenv](http://www.virtualenv.org/en/latest/)**,
-Ruby **[Compass](https://rubygems.org/gems/compass)** and command line knowledge.
+This project requires some knowledge of python **[virtualenv](http://www.virtualenv.org/en/latest/)**,
+Ruby **[Compass](https://rubygems.org/gems/compass)** and command line usage.
 
 The instructions that follow are far from complete but should get you up and running.
 
-### Local setup - sqlite3 & MAC OS X
+### Local setup - sqlite3 & Mac OS X
 **!!!Not to be used on production environments!!!**
 
 ### Dependencies
