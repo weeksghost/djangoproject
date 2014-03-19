@@ -15,7 +15,7 @@ Ruby **[Compass](https://rubygems.org/gems/compass)** and command line knowledge
 The instructions that follow are far from complete but should get you up and running.
 
 ### Local setup - sqlite3 & MAC OS X
-**!Not to be used on production environments!**
+**!!!Not to be used on production environments!!!**
 
 ### Dependencies
 
