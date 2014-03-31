@@ -66,4 +66,5 @@ INSTALLED_APPS = (
     'homepage',
     'mediaspot',
     'sitemaps',
+    'social',
 )

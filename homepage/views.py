@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.utils import timezone
 
 from homepage.models import FeaturedText, FeaturedVideo
+from social.models import Social
 from blog.models import Post
 
 def homepage(request):
@@ -21,5 +22,6 @@ def homepage(request):
         'featured':featured,
         'posts': posts,
         'embed':extvideo,
+        'social': Social.objects.all()
     }
     return render(request, template, context)

@@ -136,9 +136,11 @@
 
                     <div class="grid col-380 fit">
                      <ul class="social-icons">
-                      <li class="twitter-icon"><a href="#" target="_blank" title="Twitter"><img src="{% static "images/icons/twitter-icon.png" %}" width="24" height="24" alt="Twitter"></a></li>
-                      <li class="linkedin-icon"><a href="#" target="_blank" title="LinkedIn"><img src="{% static "images/icons/linkedin-icon.png" %}" width="24" height="24" alt="Twitter"></a></li>
-                      <li class="google-plus-icon"><a href="#" target="_blank" title="Google Plus"><img src="{% static "images/icons/googleplus-icon.png" %}" width="24" height="24" alt="Google Plus"></a></li>
+                    {% for link in social %}
+                      <li class="twitter-icon"><a href="{{ link.twitter_url }}" target="_blank" title="Twitter"><img src="{% static "images/icons/glyphicons_social_31_twitter.png" %}" width="24" height="24" alt="Twitter"></a></li>
+                      <li class="linkedin-icon"><a href="{{ link.linkedin_url }}" target="_blank" title="LinkedIn"><img src="{% static "images/icons/glyphicons_social_17_linked_in.png" %}" width="24" height="24" alt="Twitter"></a></li>
+                      <li class="github-icon"><a href="{{ link.github_url }}" target="_blank" title="Github"><img src="{% static "images/icons/glyphicons_social_21_github.png" %}" width="24" height="24" alt="Google Plus"></a></li>
+                    {% endfor %}
                      </ul>
                     </div>
 
