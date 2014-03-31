@@ -85,3 +85,11 @@ Local setup - sqlite3 & Mac OS X
 10. Visit the admin:
 
     **[http://localhost:8000/admin/](http://localhost:8000/admin/)**
+    
+----------
+Production
+----------
+
+If you would like to host a verison of the project there are instructions (originally authored by a colleague) on how to set up a
+**[Complete Single Server Django Stack](http://brooklyndelta.com/blog/complete-single-server-django-stack-tutorial/)**
+I am currently running a fork of this project on an **[AWS](http://aws.amazon.com/)** instance.
