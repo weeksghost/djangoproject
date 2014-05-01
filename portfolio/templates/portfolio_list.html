@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="post-data">Work</h1>
+            <span class="divider-column big"></span>
+        </div>
+    </div>
+
+    {% for item in work %}
+        <div id="author-meta" class="clearfix">
+            <div class="col-xs-12 col-sm-8">
+                <h2 class="post-entry"><a href="{{ item.url }}">{{ item.title|safe }}</a></h2>
+            </div>
+        <div class="col-xs-12 col-sm-8">
+            {% if item.photo %}
+            <a href="{{ item.url }}">
+                <img alt="" src="{{ MEDIA_URL }}{{ item.photo }}" />
+            </a>
+            {% endif %}
+            <div class="post-edit"><p>{{ item.description|safe }}</p></div>
+        </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}

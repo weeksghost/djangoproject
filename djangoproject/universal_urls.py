@@ -14,4 +14,6 @@ urlpatterns = patterns('',
 
         url(r'^contact/', include('contact_us.urls')),
         url(r'^blog/', include('blog.urls')),
+
+        url(r'^portfolio/', include('portfolio.urls')),
 )

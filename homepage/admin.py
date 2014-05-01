@@ -23,5 +23,5 @@ class FeaturedVideoAdmin(admin.ModelAdmin):
     )
     list_display = ('title', 'active',)
 
-admin.site.register(FeaturedText, FeaturedTextAdmin) 
+admin.site.register(FeaturedText, FeaturedTextAdmin)
 admin.site.register(FeaturedVideo, FeaturedVideoAdmin)
