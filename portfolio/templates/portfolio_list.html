@@ -4,25 +4,24 @@
 
 {% block content %}
 
-    <div class="row">
-        <div class="col-xs-12">
-            <h1 class="post-data">Work</h1>
-            <span class="divider-column big"></span>
-        </div>
-    </div>
+    <h1 class="post-data">Portfolio & Projects</h1>
 
     {% for item in work %}
-        <div id="author-meta" class="clearfix">
-            <div class="col-xs-12 col-sm-8">
-                <h2 class="post-entry"><a href="{{ item.url }}">{{ item.title|safe }}</a></h2>
+    <div class="col-lg-4">
+        <div id="widgets">
+            <div class="widget-wrapper">
+                <div class="widget-title-Portfolio">
+                {% if item.url %}
+                    <h3><a href="{{ item.url }}" target="_blank">{{ item.title|safe }}</a></h3>
+                {% endif %}
+                <div class="post-edit"><p>{{ item.description|safe }}</p></div>
+                {% if item.photo %}
+                <a href="{{ item.url }}" target="_blank">
+                    <img alt="" src="{{ MEDIA_URL }}{{ item.photo }}" />
+                </a>
+                {% endif %}
+                </div>
             </div>
-        <div class="col-xs-12 col-sm-8">
-            {% if item.photo %}
-            <a href="{{ item.url }}">
-                <img alt="" src="{{ MEDIA_URL }}{{ item.photo }}" />
-            </a>
-            {% endif %}
-            <div class="post-edit"><p>{{ item.description|safe }}</p></div>
         </div>
     </div>
     {% endfor %}
