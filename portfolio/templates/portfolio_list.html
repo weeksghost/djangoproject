@@ -13,6 +13,8 @@
                 <div class="widget-title-Portfolio">
                 {% if item.url %}
                     <h3><a href="{{ item.url }}" target="_blank">{{ item.title|safe }}</a></h3>
+                {% else %}
+                    <h3><a>{{ item.title|safe }}</a></h3>
                 {% endif %}
                 <div class="post-edit"><p>{{ item.description|safe }}</p></div>
                 {% if item.photo %}

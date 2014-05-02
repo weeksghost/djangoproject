@@ -54,13 +54,13 @@
                     <a href="{% url 'home' %}" title="Home">Home</a>
                     </li>
                 <li class="page_item page-item-2">
-                    <a href="{% url 'blog' %}" title="Blog">Blog</a>
+                    <a href="{% url 'portfolio' %}" title="Portfolio">Portfolio</a>
                     </li>
                 <li class="page_item page-item-3">
-                    <a href="{% url 'contact' %}" title="Contact">Contact</a>
+                    <a href="{% url 'blog' %}" title="Blog">Blog</a>
                     </li>
                 <li class="page_item page-item-4">
-                    <a href="{% url 'portfolio' %}" title="Portfolio">Portfolio</a>
+                    <a href="{% url 'contact' %}" title="Contact">Contact</a>
                     </li>
             </ul>
 
@@ -74,9 +74,9 @@
                 <select id="tinynav1" class="tinynav">
 
                     <option value="{% url 'home' %}" selected="selected">Home</option>
+                    <option value="{% url 'portfolio' %}">Contact</option>
                     <option value="{% url 'blog' %}">Blog</option>
                     <option value="{% url 'contact' %}">Contact</option>
-                    <option value="{% url 'portfolio' %}">Contact</option>
                 </select>
             </nav>
 
