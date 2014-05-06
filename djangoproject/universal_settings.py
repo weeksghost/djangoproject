@@ -31,15 +31,15 @@ TEMPLATE_DIRS = (
         "templates",
 )
 
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-
-EMAIL_HOST = ''
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = ''
-SERVER_EMAIL = ''
+#EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+#
+#EMAIL_HOST = ''
+#EMAIL_HOST_USER = ''
+#EMAIL_HOST_PASSWORD = ''
+#EMAIL_PORT = 587
+#EMAIL_USE_TLS = True
+#DEFAULT_FROM_EMAIL = ''
+#SERVER_EMAIL = ''
 
 MARKITUP_FILTER = ('base.templatetags.base_filters.raw_html', {})
 #JQUERY_URL = 'admin/js/jquery.min.js'

@@ -1,9 +1,7 @@
-Hi there,
+You have received a message from our Contact Us form.
 
-You have received a contact request.
+From: {{ name }}
+Email: {{ from_email }}
+Message:
 
-Name: {{ name }}
-Email: {{ email }}
-Message: {{ body }}
-
-Have a great day!
+{{ message }}

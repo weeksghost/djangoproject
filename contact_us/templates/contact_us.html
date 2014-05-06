@@ -10,32 +10,60 @@
 }
 </style>
 
-    <div class="fluid-container">
-        <div id="wrapper-home" class="clearfix">
-            <div class="col-300">
-               <h1 class="featured-title">Contact</h1>
-                  <div id="respond" class="comment-repsond">
-                      <form name="Contact" action="" method="POST">{% csrf_token %} 
+<div class="fluid-container">
+    <div id="wrapper-home" class="clearfix">
+        <div class="col-300">
+            <h1 class="featured-title">Contact</h1>
+                <div id="respond" class="comment-repsond">
+
+{% comment %}
+                    <form name="Contact" action="" method="POST">{% csrf_token %} 
+                    {{ form.non_field_errors }}
+                    <div class="comment-form-author">
+                        <label for="id_name">Name</label>
+                        <input id="id_name" name="name" type="text" class="input instant-input" value="{{ form.name.value|default_if_none:"" }}">
+                        <label {{ form.name.errors }}</label>
+                    </div>
+                    <div class="comment-form-email">
+                        <label for="id_email_address">Email</label>
+                        <input id="id_email_address" name="email_address" type="text" value="{{ form.email_address.value|default_if_none:"" }}">
+                        <label {{ form.email_address.errors }}</label>
+                    </div>
+                        <div class="comment-form-comment">
+                        <label for="id_message">Message</label>
+                        <textarea rows="5" id="id_message" name="message" value="{ form.message|default_if_none:"" }"></textarea>
+                        <label {{ form.message.errors }}</label>
+                    </div>
+                    <div class="form-submit">
+                        <p><input type="submit" value="Send Message"></p>
+                    </div>
+                    </form>
+{% endcomment %}
+
+
+                    <form name="Contact" action="" method="POST">{% csrf_token %} 
                             {{ form.non_field_errors }}
                         <div class="comment-form-author">
+                            <label for="id_name">Name:</label>
+                            <input id="id_name" name="name" type="text">
                             {{ form.name.errors }}
-                            <label id="id_name">Name:</label>
-                            {{ form.name }}
                         </div>
                         <div class="comment-form-email">
-                            {{ form.email.errors }}
-                            <label id="id_email">Email:</label>
-                            {{ form.name }}
+                            <label for="id_email_address">Email:</label>
+                            <input id="id_email_address" name="email_address" type="text">
+                            {{ form.email_address.errors }}
                         </div>
                         <div class="comment-form-comment">
-                            {{ form.body.errors }}
                             <label id="id_body">Message:</label>
-                            {{ form.body }}
+                            <textarea rows="5" id="id_message" name="message"></textarea>
+                            {{ form.message.errors }}
                         </div>
                             <div class="form-submit">
                                <p><input type="submit" value="Send message" /></p>
                             </div>
                       </form>
+
+
                   </div>
               </div>
            </div>
