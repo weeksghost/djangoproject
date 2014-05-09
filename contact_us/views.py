@@ -1,6 +1,5 @@
 from django.template.loader import get_template
 from django.template import Context
-from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.shortcuts import redirect, render
 from django.views.decorators.csrf import csrf_exempt
@@ -10,15 +9,14 @@ from contact_us.forms import ContactForm
 
 @csrf_exempt
 def contact_form(request):
-    form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
+            subject = form.cleaned_data['subject'].name
             name = form.cleaned_data['name']
             from_email = form.cleaned_data['email_address']
             message = form.cleaned_data['message']
             to_email = form.cleaned_data['subject'].recipient
-            subject = "Contact Request Received"
             template = get_template('email_template.txt')
             context = Context({
                 'name': name,
@@ -26,7 +24,7 @@ def contact_form(request):
                 'from_email': from_email,
             })
             body = template.render(context)
-            send_email.delay(subject, body, from_email, 'erikomarty@gmail.com')
+            send_email.delay(subject, body, 'erikomarty@gmail.com', to_email)
             url = reverse('thankyou', args=())
             return redirect(url)
     else:

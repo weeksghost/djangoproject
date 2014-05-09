@@ -42,7 +42,6 @@
     </head>
     <body>
 
-
         <div class="container">
             <ul class="menu l_tinynav1">
                 <li class="head-logo">
@@ -66,13 +65,12 @@
 
                 <div id="tiny-head-logo">
                     <a href="{% url 'home' %}" title="Django Responsive">
-                        <img alt="Django Responsive" src="{% static "images/default-logo-4.png" %}"></a>
-
+                        <img alt="Django Responsive" src="{% static "images/default-logo-4.png" %}">
+                    </a>
                 </div>
 
             <nav>
                 <select id="tinynav1" class="tinynav">
-
                     <option value="{% url 'home' %}" selected="selected">Home</option>
                     <option value="{% url 'portfolio' %}">Portfoliio</option>
                     <option value="{% url 'blog' %}">Blog</option>
