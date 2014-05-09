@@ -26,7 +26,7 @@
                         <input id="id_email_address" name="email_address" type="text" value="{{ form.email_address.value|default_if_none:"" }}">
                         <label>{{ form.email_address.errors }}</label>
                     </div>
-                    <div class="comment-form-subject">
+                    <div class="instant-select instant-input">
                         <label for="id_subject">Subject</label>
                         <div class="comment-form-subject">{{ form.subject }}</div>
                         <label>{{ form.subject.errors }}</label>
