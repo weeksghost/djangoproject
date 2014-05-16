@@ -2852,3 +2852,16 @@ a img {
 img.wp-smiley {
   vertical-align: middle;
 }
+
+@-moz-document url-prefix() {
+    img{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+     img{
+        max-width: 100%;
+    }
+}

@@ -6,3 +6,4 @@ celerybeat-schedule
 celeryev.pid
 static/css/*.css
 database.db
+conf/fabfile.py

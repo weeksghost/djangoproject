@@ -10,7 +10,6 @@
     <div class="col-lg-4">
         <div id="widgets">
             <div class="widget-wrapper">
-                <div class="widget-title-Portfolio">
                 {% if item.url %}
                     <h3><a href="{{ item.url }}" target="_blank">{{ item.title|safe }}</a></h3>
                 {% else %}
@@ -22,7 +21,6 @@
                     <img alt="" src="{{ MEDIA_URL }}{{ item.photo }}" />
                 </a>
                 {% endif %}
-                </div>
             </div>
         </div>
     </div>
