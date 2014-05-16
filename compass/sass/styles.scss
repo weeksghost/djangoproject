@@ -2854,14 +2854,14 @@ img.wp-smiley {
 }
 
 @-moz-document url-prefix() {
-    img{
-        width: 100%;
-        max-width: 100%;
+    .widget-img img {
+      width: 100%;
+      max-width: 100%;
     }
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-     img{
-        max-width: 100%;
+    .widget-img img {
+      max-width: 100%;
     }
 }

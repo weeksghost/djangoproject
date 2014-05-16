@@ -18,7 +18,9 @@
                 <div class="post-edit"><p>{{ item.description|safe }}</p></div>
                 {% if item.photo %}
                 <a href="{{ item.url }}" target="_blank">
-                    <img alt="" src="{{ MEDIA_URL }}{{ item.photo }}" />
+                    <div class="widget-img">
+                        <img alt="" src="{{ MEDIA_URL }}{{ item.photo }}" />
+                    </div>
                 </a>
                 {% endif %}
             </div>
