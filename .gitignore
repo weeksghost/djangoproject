@@ -1,6 +1,5 @@
 .DS*
 *.pyc
-local_*
 compass/.sass-cache
 celerybeat-schedule
 celeryev.pid
